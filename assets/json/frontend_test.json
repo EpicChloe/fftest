@@ -1,0 +1,15 @@
+/**
+ Export to JSON plugin for PHPMyAdmin
+ @version 0.1
+ */
+
+// Database 'frontend_test'
+// frontend_test.accounts
+
+[{"id": 1,"email": "larry@fake.com"}, {"id": 2,"email": "moe@fake.com"}, {"id": 3,"email": "curly@fake.com"}]// frontend_test.charges
+
+[{"id": 1,"payment_profile_id": 1,"package_id": 3,"currency_type": "USD","amount": 95000,"created_at": "2012-05-08 15:16:10","refunded_at": "0000-00-00 00:00:00"}, {"id": 2,"payment_profile_id": 1,"package_id": 1,"currency_type": "USD","amount": 500,"created_at": "2012-07-18 17:32:56","refunded_at": "2012-07-19 11:15:41"}, {"id": 3,"payment_profile_id": 2,"package_id": 2,"currency_type": "USD","amount": 5000,"created_at": "2012-08-07 08:37:10","refunded_at": "0000-00-00 00:00:00"}, {"id": 4,"payment_profile_id": 1,"package_id": 2,"currency_type": "USD","amount": 5000,"created_at": "2012-09-01 12:20:49","refunded_at": "0000-00-00 00:00:00"}, {"id": 5,"payment_profile_id": 3,"package_id": 1,"currency_type": "USD","amount": 400,"created_at": "2012-07-10 16:18:54","refunded_at": "0000-00-00 00:00:00"}]// frontend_test.packages
+
+[{"id": 1,"name": "Aranha Red Bean Booster","cost": 500,"currency_type": "USD","award_size": 40}, {"id": 2,"name": "Thresher Red Bean Booster","cost": 5000,"currency_type": "USD","award_size": 168}, {"id": 3,"name": "Brontodon Red Bean Booster","cost": 10000,"currency_type": "USD","award_size": 960}]// frontend_test.payment_profiles
+
+[{"id": 1,"account_id": 1,"last_four": 1234,"card_type": "Visa","exp_month": 5,"exp_year": 2015,"is_default": 1}, {"id": 2,"account_id": 1,"last_four": 4242,"card_type": "AMEX","exp_month": 9,"exp_year": 2014,"is_default": 0}, {"id": 3,"account_id": 3,"last_four": 1432,"card_type": "Mastercard","exp_month": 9,"exp_year": 2020,"is_default": 1}]

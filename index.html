@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>In-Game Purchase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/in-game-purchase.css">
+</head>
+<body>
+<div id="background-container">
+    <div class="container" id="main-container">
+        <!-- Header -->
+        <div id="container-header">
+            <span><strong>PURCHASE ADDITIONAL REDBUX</strong></span>
+            <span class="pull-right"><button id="close-main-container-button" class="close"><img src="assets/img/btn_close.png"></button></span>
+        </div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            <li><a id="payment-method-tab" href="#payment-methods" data-toggle="tab"><img src="assets/img/cc-image.png"></a></li>
+            <li class="hidden"><a id="new-payment-method-tab" href="#new-card" data-toggle="tab">NEW CARD</a> </li>
+            <li><a id="purchase-history-tab" href="#purchase-history" data-toggle="tab"><img src="assets/img/history-image.png"></a></li>
+            <li class="pull-right" id="rb-label"><strong> Current Balance: <br><span class="pull-right"><span id="rb-amount">19</span> <img id="rb-image" src="assets/img/ico_redbeans.png"></span></strong></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane" id="new-card">
+                <div class="container-header" id="new-card-header"><p class="text-center">Create a new Payment Method.</p></div>
+                <div class="container col-md-10 col-md-offset-1" id="new-payment-method-container">
+                    <form class="form-horizontal" id="new-payment-method-form">
+                        <div class="form-group">
+                            <label class="col-md-6 col-left control-label">Accept Card Types:</label>
+                            <div class="col-md-6 col-right form-input">
+                                <img id="accepted-card-type-image" src="assets/img/ico_cc.png">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-6 col-left control-label">Credit Card Number:</label>
+                            <div class="col-md-6 col-right form-input">
+                                <input class="form-control" id="cc-number-input">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-6 col-left control-label">Expiration Date:</label>
+                            <div class="col-md-3 col-month form-input">
+                                <input class="form-control" id="exp-date-input-month" placeholder="Month">
+                            </div>
+                            <div class="col-md-3 col-year form-input">
+                                <input class="form-control" id="exp-date-input-year" placeholder="Year">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-6 col-left control-label">Validation Code (<abbr title="Last 3 Digits found on the back of the card">?</abbr>):</label>
+                            <div class="col-md-6 col-right form-input">
+                                <input class="form-control" id="validation-code-input">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-6 col-left control-label">Zip / Postal Number:</label>
+                            <div class="col-md-6 col-right form-input">
+                                <input class="form-control" id="postal-coder-input">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-12" id="create-payment-method-container">
+                    <button class="" id="create-payment-method">Create Payment Method</button>
+                </div>
+                <div class="col-md-12" id="t-c-agreement">
+                    <span id="t-c-label">
+                        <p class="text-center">By Clicking Confirm, you agree to Firefall's Terms &amp; Conditions</p>
+                    </span>
+                </div>
+            </div>
+            <div class="tab-pane" id="payment-methods">
+                <div class="container-header" id="payment-methods-container-header">
+                    <p class="text-center">Manage Payment Methods</p>
+                </div>
+                <div id="payment-methods-container">
+                </div>
+                <div class="col-md-12" id="payment-methods-bottom-buttons-container">
+                    <button class="btn-grey" id="cancel-payment-method-button">Cancel</button><button id="add-new-payment-method-button">Add Another Payment Method</button>
+                </div>
+            </div>
+            <div class="tab-pane" id="purchase-history">
+                <table class="table table-condensed" id="purchase-history-table">
+                    <tr id="purchase-history-header">
+                        <th id="ph-name"><strong>PACKAGE NAME</strong></th>
+                        <th id="ph-size"><strong>SIZE</strong></th>
+                        <th id="ph-cost"><strong>COST</strong></th>
+                        <th id="ph-date"><strong>DATE</strong></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="assets/js/jquery.formatCurrency.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="assets/js/jsoop-debug.js"></script>
+    <script src="assets/js/server_emulation.js"></script>
+    <script src="assets/js/in-game-purchase.js"></script>
+</body>
+</html>
